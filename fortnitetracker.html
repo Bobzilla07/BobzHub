@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/gh/Fortnite-API/nodejs-wrapper@1.1.0-web/FNAPIcom.js"></script>
+  </head>
+  <body>
+    <pre id="response1"></pre>
+    <pre id="response2"></pre>
+    <pre id="response3"></pre> 
+    <pre id="response4"></pre>
+ <script>
+      const client = new FNAPIcom.Client({
+        language: FNAPIcom.Language.English,
+        apiKey: '612a7991-51d1-4d25-a562-3c963f890088',
+      });
+      client.brShop().then((res) => {
+        document.getElementById('response1').innerText = JSON.stringify(res, null, 2);
+      });
+      
+      client.brMap().then((res) => {
+        document.getElementById('response2').innerText = JSON.stringify(res, null, 2);
+      });
+
+      client.brStats({name: 'Bobzilla075803'}).then((res) => {
+        document.getElementById('response3').innerText = JSON.stringify(res, null, 2);
+      });
+      
+      client.brNews().then((res) => {
+        document.getElementById('response4').innerText = JSON.stringify(res, null, 2);
+      });
+    </script>
+  </body>
+</html>

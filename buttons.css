@@ -1,0 +1,36 @@
+.emulatorbutton {
+  background-color: #333333;
+  border-radius: 100px;
+  width: 100px;
+  height: 50px;
+  color:#00ff00;
+  text-align: center;
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+@keyframes emulatorbuttonhover {
+  0% {
+    background-color: ##637963;
+    color: #00FF00;
+  }
+  25% {
+    background-color: #5FF25F;
+    color:#607760;
+  }
+  50% {
+    background-color: #41FF41;
+    color:#637963;
+  }
+  75% {
+    background-color: #00ff00;
+    color:#637963;
+  }
+}
+
+.emulatorbutton:hover {
+    animation: emulatorbuttonhover 1500ms;
+    background-color: #00ff00;
+    color:#333333;
+}
